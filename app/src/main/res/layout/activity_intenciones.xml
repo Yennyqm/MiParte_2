@@ -30,4 +30,9 @@
         android:layout_height="wrap_content"
         android:onClick="email"
         android:text="Enviar un correo al Ing. del curso" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="whatssap"
+        android:text="Whatssap" />
 </LinearLayout>
