@@ -14,7 +14,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    @Override  public  boolean  onCreateOptionsMenu(Menu menu)  { getMenuInflater().inflate(R.menu.menu1,  menu);
+    @Override  public  boolean  onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu1,  menu);
         return  true;  /**  true  ->  el  menú  ya  está  visible  */
     }
     @Override  public  boolean  onOptionsItemSelected(MenuItem item)  {
@@ -28,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
         }
         if (id == R.id.accion_salir) { finish();
             return  true;
+        }
+        if (id == R.id.activity_comunicacion) {
+            startActivity(new Intent(this, Comunicacion1.class));
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
