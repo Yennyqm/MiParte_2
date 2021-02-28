@@ -3,6 +3,7 @@
     package="com.ditec.miparte2">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MiParte2">
-        <activity android:name=".Multimedia"></activity>
+        <activity android:name=".Multimedia3"></activity>
+        <activity android:name=".Multimedia2" />
+        <activity android:name=".Multimedia" />
         <activity android:name=".Intenciones" />
         <activity android:name=".Comunicacion3" />
         <activity android:name=".Comunicacion2" />
