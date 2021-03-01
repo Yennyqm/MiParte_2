@@ -40,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.activity_multimedia) {
             startActivity(new Intent(this, Multimedia.class)); return true;
         }
+        if (id == R.id.activity_permisos) {
+            startActivity(new Intent(this, Permisos.class)); return true;
+        }
 
 
 
