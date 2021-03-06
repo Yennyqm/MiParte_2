@@ -1,5 +1,6 @@
 package com.ditec.miparte2;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,8 +12,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -29,7 +33,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById( R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
-
 
     @Override  public  boolean  onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu1,  menu);
@@ -98,9 +101,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         DrawerLayout drawer = (DrawerLayout) findViewById(
                 R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) { drawer.closeDrawer(GravityCompat.START);
-        }
-        else {
-                super.onBackPressed(); }
+        } else {
+                super.onBackPressed();
+    }
 }
+    public void btnderecha(View view) {
+        Toast.makeText(this, "Se pulso el floating button de la derecha "+ view.getTag(), Toast.LENGTH_LONG).show();
+    }
 
+    public void btnizquierda(View view) {
+        Toast.makeText(this, "Se pulso el floating button de la izquierda "+ view.getTag(), Toast.LENGTH_LONG).show();
+    }
+    public  void  fabizquierda(View  view)  { Snackbar.make(view,  "Replace  with  your  own  action",
+            Snackbar.LENGTH_LONG).setAction("Action",  null).show();
+    }
+    public void fabderecha(View view) {
+        Snackbar.make(view,"¿Estás  seguro?",  Snackbar.LENGTH_LONG)
+                .setAction("SI",  new  View.OnClickListener()  { @Override
+                public  void  onClick(View  view)  {
+//tu evento
+                }
+                })
+                .show();
+    }
 }
